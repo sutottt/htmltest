@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css" />
   <title>JSONデータを取得してコンソールに表示する</title>
-  <script src="test.js"></script>
+  <script src="./test.js"></script>
 </head>
 <body>
+  <!-- 
   <button type="button" onclick="fetchData()">
     データ取得
   </button>
-  <table border="1" id="tbl">
+  -->
+  <header class="HeaderMenu">
+  <img src="./image/Cabreoシンボル赤丸白単色.svg" width="60px">
+  </header>
+  <div class="UnderTable">
+  <table id="tbl">
     <tr>
       <th>instrumentation_time</th>
       <th>record_num</th>
@@ -52,5 +59,6 @@
       <td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
     </tr>
   </table>
+  </div>
 </body>
 </html>

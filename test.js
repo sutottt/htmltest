@@ -1,6 +1,8 @@
 // JSONデータを取得するAPIのURL
 var apiUrl = "https://cabreo-telemetry-test-f0ca387e08cd.herokuapp.com/test/latest";
 
+window.setInterval(fetchData,1000)
+
 // APIからJSONデータを取得する関数
 function fetchData() {
 

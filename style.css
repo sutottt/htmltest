@@ -1,0 +1,26 @@
+body {
+    background-color: #303030;
+}
+.HeaderMenu {
+    height: 60px;
+    padding: 10px;
+}
+.UnderTable {
+    padding: 10px;
+}
+th {
+    background-color: gray;
+    color: #e2e2e2;
+}
+td {
+    background-color: #bdbdbd;
+}
+
+th,td{
+    border:solid 1px #707070;
+    padding: 3px;
+}
+
+table{
+    border-collapse: collapse;
+}
