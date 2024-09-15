@@ -8,17 +8,27 @@ body {
 }
 
 .HeaderMenu {
-    height: 60px;
-    padding: 10px;
-    display: flex;
+    height: 70px;
     background-color: rgb(163, 163, 163);
 }
-.UnderTable {
-    padding: 10px;
+
+.symbol{
+    height: 60px;
+    margin:5px;
 }
 
+.logo{
+    height: 35px;
+    margin: 10px;
+    margin-left: 0;
+}
 .header-right{
-    justify-content: flex-end;
+    float: right;
+    margin: 20px;
+}
+
+.UnderTable{
+    padding: 10px;
 }
 
 th {
@@ -28,6 +38,7 @@ th {
 td {
     background-color: #bdbdbd;
     color: black;
+    text-align:right
 }
 
 th,td{
