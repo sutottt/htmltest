@@ -7,86 +7,10 @@ body {
     background-color: #303030;
 }
 
-.HeaderMenu {
-    height: 70px;
-    background-color: rgb(163, 163, 163);
-}
-
-.symbol{
-    height: 60px;
-    margin:5px;
-}
-
-.logo{
-    height: 35px;
-    margin: 10px;
-    margin-left: 0;
-}
-.header-right{
-    float: right;
-    margin: 20px;
-}
-
-.UnderTable{
-    padding: 10px;
-}
-
-th {
+.serverbutton{
     background-color: gray;
-    color: #e2e2e2;
-}
-td {
-    background-color: #bdbdbd;
-    color: black;
-    text-align:right
-}
-
-th,td{
-    border:solid 1px #707070;
-    padding: 3px;
-}
-
-table{
-    border-collapse: collapse;
-}
-
-.latency_field{
-    color: #e2e2e2;
-    display: flex;
-}
-
-.toggle-button-1 {
-    display: inline-block;
-    position: relative;
-    width: 50px;
-    height: 25px;
-    border-radius: 25px;
-    background-color: #e3e3e3;
-    cursor: pointer;
-    transition: background-color .4s;
-}
-
-.toggle-button-1:has(:checked) {
-    background-color: #4bd865;
-}
-
-.toggle-button-1::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
-    background-color: #fff;
-    content: '';
-    transition: left .4s;
-}
-
-.toggle-button-1:has(:checked)::after {
-    left: 25px;
-}
-
-.toggle-button-1 input {
-    display: none;
+    height: auto;
+    width: 300px;
+    font-size: 30px;
+    margin: 10px;
 }
