@@ -83,9 +83,9 @@ function addrow(data){
     tbl.rows[1].cells[0].innerHTML = data.instrumentation_time;
     tbl.rows[1].cells[1].innerHTML = data.record_num;
     tbl.rows[1].cells[2].innerHTML = data.registration_time;
-    tbl.rows[1].cells[3].innerHTML = data.battery.voltage.measuredValue.value;
-    tbl.rows[1].cells[4].innerHTML = data.battery.voltage.measuredValue.unit;
-    tbl.rows[1].cells[5].innerHTML = data.battery.current.measuredValue.value;
-    tbl.rows[1].cells[6].innerHTML = data.battery.current.measuredValue.unit;
-    tbl.rows[1].cells[7].innerHTML = data.test_data_5;
+    tbl.rows[1].cells[3].innerHTML = data.battery.voltage.measuredValue.value + " " + data.battery.voltage.measuredValue.unit;
+    tbl.rows[1].cells[4].innerHTML = data.battery.current.measuredValue.value + " " + data.battery.current.measuredValue.unit;
+    tbl.rows[1].cells[5].innerHTML = 0;
+    tbl.rows[1].cells[6].innerHTML = 0;
+    tbl.rows[1].cells[7].innerHTML = 0;
 }
