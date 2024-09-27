@@ -1,5 +1,5 @@
 // JSONデータを取得するAPIのURL
-var apiUrl = "https://cabreo-telemetry-test-f0ca387e08cd.herokuapp.com/test/latest";
+var apiUrl = "https://cabreo-telemetry-test-f0ca387e08cd.herokuapp.com/onboard/data/latest";
 
 window.setInterval(update_jud,1000)
 
@@ -83,9 +83,9 @@ function addrow(data){
     tbl.rows[1].cells[0].innerHTML = data.instrumentation_time;
     tbl.rows[1].cells[1].innerHTML = data.record_num;
     tbl.rows[1].cells[2].innerHTML = data.registration_time;
-    tbl.rows[1].cells[3].innerHTML = data.test_data_1;
-    tbl.rows[1].cells[4].innerHTML = data.test_data_2;
-    tbl.rows[1].cells[5].innerHTML = data.test_data_3;
-    tbl.rows[1].cells[6].innerHTML = data.test_data_4;
+    tbl.rows[1].cells[3].innerHTML = data.battery.voltage.measuredValue.value;
+    tbl.rows[1].cells[4].innerHTML = data.battery.voltage.measuredValue.unit;
+    tbl.rows[1].cells[5].innerHTML = data.battery.current.measuredValue.value;
+    tbl.rows[1].cells[6].innerHTML = data.battery.current.measuredValue.unit;
     tbl.rows[1].cells[7].innerHTML = data.test_data_5;
 }
