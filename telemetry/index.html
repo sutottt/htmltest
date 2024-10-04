@@ -8,11 +8,11 @@
   <script src="./test.js"></script>
 </head>
 <body>
-  <!-- 
-  <button type="button" onclick="fetchData()">
-    データ取得
+
+  <button type="button" onclick="lap_update()" id="lap_update_button">
+    更新
   </button>
-  -->
+
   <header class="HeaderMenu">
     <img src="./image/Cabreoシンボル赤単色.svg" class="symbol">
     <img src="./image/Cabreoロゴ標準色.svg" class="logo">
@@ -31,11 +31,11 @@
   <div class="UnderTable">
     <table id="tbl">
       <tr>
-        <th>No.</th>
-        <th>Measure_time</th>
-        <th>Up_time</th>
-        <th>Batt.Vol</th>
-        <th>Batt.Cur</th>
+        <th class="noLabel">No.</th>
+        <th class="timeLabel">Measure_time</th>
+        <th class="timeLabel">Up_time</th>
+        <th class="dataLabel">Batt.Vol</th>
+        <th class="dataLabel">Batt.Cur</th>
       </tr>
       <tr>
         <td>1</td><td></td><td></td><td></td><td></td>
@@ -98,6 +98,27 @@
         <td>20</td><td></td><td></td><td></td><td></td>
       </tr>
     </table>
+    <div class="table_box">
+      <table id="tbl2">
+        <tr>
+          <th class="noLabel" class="sticky">Lap</th>
+          <th class="timeLabel" class="sticky">LapTime</th>
+          <th class="dataLabel" class="sticky">Wh</th>
+          <th class="dataLabel" class="sticky">AllWh</th>
+        </tr>
+
+      </table>
+    </div>
+    <div>
+      <p>start_time<br>
+        <input type="text" id="start_time" value=""></p>
+      <p>end_time<br>
+        <input type="text" id="end_time" value=""></p>
+      <button type="button" onclick="lap_button()" id="lap_button">
+        LAP
+      </button>
+    </div>
   </div>
+  
 </body>
 </html>

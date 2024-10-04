@@ -29,7 +29,9 @@ body {
 
 .UnderTable{
     padding: 10px;
+    display: flex;
 }
+
 
 th {
     background-color: rgb(109, 109, 109);
@@ -48,6 +50,7 @@ th,td{
 
 table{
     border-collapse: collapse;
+    margin-right: 10px;
 }
 
 .latency_field{
@@ -89,4 +92,42 @@ table{
 
 .toggle-button-1 input {
     display: none;
+}
+
+.noLabel{
+    width: 50px;
+}
+
+.timeLabel {
+    width: 150px;
+}
+
+.dataLabel {
+    width: 80px;
+}
+
+.table_box{
+    overflow-y: auto;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    border-top: none;
+  }
+
+p {
+    color: #e2e2e2;
+}
+
+#tbl {
+    height: 50px;
+}
+
+
+#lap_button {
+    height: 30px;
+    width: 50px;
+    margin: 10px;
 }
