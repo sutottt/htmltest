@@ -1,25 +1,25 @@
 // JSONデータを取得するAPIのURL
 var apiUrl = "https://cabreo-telemetry-test-f0ca387e08cd.herokuapp.com/onboard/data/latest";
-
+//var apiUrl = "https://cabreo-telemetry-test-f0ca387e08cd.herokuapp.com/onboard/data/";
 window.setInterval(update_jud,1000)
 
 function update_jud() {
     let checkbox = document.getElementById('check1');
     if(checkbox.checked){
-        fetchData();
+        fetchData(apiUrl);
     }
 }
 
 // APIからJSONデータを取得する関数
-function fetchData() {
-    fetch(apiUrl)
+function fetchData(url) {
+    fetch(url)
         .then(response => {
         // レスポンスをJSONに変換
         return response.json();
         })
         .then(data => {
         // 取得したデータをコンソールに表示
-        //console.log("取得したJSONデータ:", data);
+        console.log("取得したJSONデータ:", data);
         //console.log(data.record_num);
         latency(data)
         data = data_format(data)
@@ -85,4 +85,38 @@ function addrow(data){
     tbl.rows[1].cells[2].innerHTML = data.registration_time;
     tbl.rows[1].cells[3].innerHTML = data.battery.voltage.measuredValue.value + " " + data.battery.voltage.measuredValue.unit;
     tbl.rows[1].cells[4].innerHTML = data.battery.current.measuredValue.value + " " + data.battery.current.measuredValue.unit;
+}
+
+// 開始時刻と終了時刻を設定
+const startTime = '2024-09-28T22:33:45';
+const endTime = '2024-09-29T23:59:59';
+
+const test_url = 'https://cabreo-telemetry-test-f0ca387e08cd.herokuapp.com/onboard/data/period';
+
+const requestOptions = {
+    method: 'POST', // 必要に応じて 'GET' ではなく 'POST' を使用
+    headers: {
+      'Content-Type': 'application/json',  // リクエストボディがJSON形式であることを示す
+      'Accept': 'application/json'         // レスポンス形式もJSONであることを期待
+    },
+    body: JSON.stringify({
+      start_time: startTime,
+      end_time: endTime
+    })
+  };
+
+function get_test(){
+    fetch(test_url, requestOptions)
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('取得したデータ:', data);
+    })
+    .catch(error => {
+        console.error('データ取得エラー:', error);
+    });
 }
