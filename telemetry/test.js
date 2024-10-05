@@ -129,7 +129,7 @@ function lap_process(data,startTime,endTime){
     // Wh算出処理
     var Wh = 0;
     for(var i=0;i<lap_length;i++){
-        var vol = parseFloat(data.results[i].battery.voltage.measuredValue.value);
+        var vol = parseFloat(data.results[i].battery.voltage.measuredValue.value) * 20.48;
         var curr = parseFloat(data.results[i].battery.current.measuredValue.value);
         var watt = (vol * curr)/3600;
         Wh = Wh + watt;
