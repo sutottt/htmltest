@@ -74,11 +74,12 @@ function addrow(data){
     for(var i=0;i<5;i++){
         newtr.insertCell(newtr.cells.length);
     }
+    voltage = phaseFloat(data.battery.voltage.measuredValue.value) * 20.48;
     console.log(tbl.rows[1].cells[0]);
     tbl.rows[1].cells[0].innerHTML = data.recordNum;
     tbl.rows[1].cells[1].innerHTML = data.instrumentation_time;
     tbl.rows[1].cells[2].innerHTML = data.registration_time;
-    tbl.rows[1].cells[3].innerHTML = data.battery.voltage.measuredValue.value + " " + data.battery.voltage.measuredValue.unit;
+    tbl.rows[1].cells[3].innerHTML = voltage.toFixed(3).toString() + " " + data.battery.voltage.measuredValue.unit;
     tbl.rows[1].cells[4].innerHTML = data.battery.current.measuredValue.value + " " + data.battery.current.measuredValue.unit;
 }
 
