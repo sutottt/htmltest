@@ -74,7 +74,7 @@ function addrow(data){
     for(var i=0;i<5;i++){
         newtr.insertCell(newtr.cells.length);
     }
-    var voltage = phaseFloat(data.battery.voltage.measuredValue.value) * 20.48;
+    var voltage = parseFloat(data.battery.voltage.measuredValue.value) * 20.48;
     console.log(tbl.rows[1].cells[0]);
     tbl.rows[1].cells[0].innerHTML = data.recordNum;
     tbl.rows[1].cells[1].innerHTML = data.instrumentation_time;
