@@ -75,7 +75,7 @@ function addrow(data){
         newtr.insertCell(newtr.cells.length);
     }
     var voltage = parseFloat(data.battery.voltage.measuredValue.value) * 20.48;
-    var current = parseFloat(data.battery.current.measuredValue.value) * -19;
+    var current = parseFloat(data.battery.current.measuredValue.value) * -1;
     console.log(tbl.rows[1].cells[0]);
     tbl.rows[1].cells[0].innerHTML = data.recordNum;
     tbl.rows[1].cells[1].innerHTML = data.instrumentation_time;
@@ -131,7 +131,7 @@ function lap_process(data,startTime,endTime){
     var Wh = 0;
     for(var i=0;i<lap_length;i++){
         var vol = parseFloat(data.results[i].battery.voltage.measuredValue.value) * 20.48;
-        var curr = parseFloat(data.results[i].battery.current.measuredValue.value) * -19;
+        var curr = parseFloat(data.results[i].battery.current.measuredValue.value) * -1;
         var watt = (vol * curr)/3600;
         Wh = Wh + watt;
     }
